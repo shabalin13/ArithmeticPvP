@@ -12,10 +12,23 @@
 		B616EB5E27FB64B30062FECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B616EB5C27FB64B30062FECD /* Main.storyboard */; };
 		B616EB6027FB64B40062FECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B616EB5F27FB64B40062FECD /* Assets.xcassets */; };
 		B616EB6327FB64B40062FECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B616EB6127FB64B40062FECD /* LaunchScreen.storyboard */; };
+		B67070BF280DD3EE0029E41D /* EndlessStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67070BE280DD3EE0029E41D /* EndlessStatisticsTableViewCell.swift */; };
+		B67070C1280EA7AE0029E41D /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67070C0280EA7AE0029E41D /* LevelTableViewCell.swift */; };
+		B67070C3280EA7BD0029E41D /* CampaignLevelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67070C2280EA7BD0029E41D /* CampaignLevelsTableViewController.swift */; };
+		B67070C6280EA8050029E41D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67070C5280EA8050029E41D /* Level.swift */; };
+		B67070C8280EA81F0029E41D /* CampaignGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67070C7280EA81F0029E41D /* CampaignGame.swift */; };
+		B68C8C25280C0BC800485CBF /* EndlessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */; };
+		B68C8C27280C0D9000485CBF /* StartEndlessGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */; };
+		B68C8C29280C492B00485CBF /* EndlessStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */; };
+		B6D040FB280EAEB900B5FA87 /* CampaignGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */; };
+		B6D040FD280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */; };
+		B6D040FF280F329A00B5FA87 /* CampaignStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */; };
+		B6D0410128102BEC00B5FA87 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0410028102BEC00B5FA87 /* TabBarViewController.swift */; };
+		B6D04104281031AC00B5FA87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D04103281031AC00B5FA87 /* ProfileViewController.swift */; };
 		B6DA9DBC27FB74D9007FE653 /* RatingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */; };
 		B6DA9DBE27FB7DBB007FE653 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */; };
 		B6DA9DC027FC2B39007FE653 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DBF27FC2B39007FE653 /* Task.swift */; };
-		B6DA9DC227FC2B40007FE653 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC127FC2B40007FE653 /* Game.swift */; };
+		B6DA9DC227FC2B40007FE653 /* EndlessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */; };
 		B6DA9DC427FC2B60007FE653 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC327FC2B60007FE653 /* Player.swift */; };
 		B6DA9DC827FCC9BD007FE653 /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,10 +41,23 @@
 		B616EB5F27FB64B40062FECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B616EB6227FB64B40062FECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B616EB6427FB64B40062FECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67070BE280DD3EE0029E41D /* EndlessStatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessStatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		B67070C0280EA7AE0029E41D /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		B67070C2280EA7BD0029E41D /* CampaignLevelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignLevelsTableViewController.swift; sourceTree = "<group>"; };
+		B67070C5280EA8050029E41D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		B67070C7280EA81F0029E41D /* CampaignGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignGame.swift; sourceTree = "<group>"; };
+		B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGameViewController.swift; sourceTree = "<group>"; };
+		B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndlessGameTableViewController.swift; sourceTree = "<group>"; };
+		B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessStatisticsTableViewController.swift; sourceTree = "<group>"; };
+		B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignGameViewController.swift; sourceTree = "<group>"; };
+		B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatisticsTableViewController.swift; sourceTree = "<group>"; };
+		B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		B6D0410028102BEC00B5FA87 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B6D04103281031AC00B5FA87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameViewController.swift; sourceTree = "<group>"; };
 		B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B6DA9DBF27FC2B39007FE653 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		B6DA9DC127FC2B40007FE653 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGame.swift; sourceTree = "<group>"; };
 		B6DA9DC327FC2B60007FE653 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,20 +92,105 @@
 		B616EB5527FB64B30062FECD /* ArithmeticPvP */ = {
 			isa = PBXGroup;
 			children = (
-				B616EB5627FB64B30062FECD /* AppDelegate.swift */,
-				B616EB5827FB64B30062FECD /* SceneDelegate.swift */,
-				B616EB5C27FB64B30062FECD /* Main.storyboard */,
-				B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */,
-				B6DA9DBF27FC2B39007FE653 /* Task.swift */,
-				B6DA9DC127FC2B40007FE653 /* Game.swift */,
-				B6DA9DC327FC2B60007FE653 /* Player.swift */,
-				B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */,
-				B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */,
+				B68C8C22280B36FB00485CBF /* Delegates */,
+				B68C8C23280B370600485CBF /* Views */,
+				B68C8C20280B34EA00485CBF /* Models */,
+				B68C8C21280B369D00485CBF /* ViewControllers */,
+				B6D04105281031BA00B5FA87 /* Profile */,
 				B616EB5F27FB64B40062FECD /* Assets.xcassets */,
-				B616EB6127FB64B40062FECD /* LaunchScreen.storyboard */,
 				B616EB6427FB64B40062FECD /* Info.plist */,
 			);
 			path = ArithmeticPvP;
+			sourceTree = "<group>";
+		};
+		B67070C4280EA7C70029E41D /* Campaign */ = {
+			isa = PBXGroup;
+			children = (
+				B67070C2280EA7BD0029E41D /* CampaignLevelsTableViewController.swift */,
+				B67070C0280EA7AE0029E41D /* LevelTableViewCell.swift */,
+				B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */,
+				B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */,
+				B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */,
+			);
+			path = Campaign;
+			sourceTree = "<group>";
+		};
+		B68C8C20280B34EA00485CBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA9DBF27FC2B39007FE653 /* Task.swift */,
+				B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */,
+				B6DA9DC327FC2B60007FE653 /* Player.swift */,
+				B67070C5280EA8050029E41D /* Level.swift */,
+				B67070C7280EA81F0029E41D /* CampaignGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B68C8C21280B369D00485CBF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B68C8C2A280C4AB400485CBF /* EndlessGame */,
+				B67070C4280EA7C70029E41D /* Campaign */,
+				B68C8C2B280C4ACA00485CBF /* RatingGame */,
+				B6D0410228102BF100B5FA87 /* TabBar */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B68C8C22280B36FB00485CBF /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B616EB5627FB64B30062FECD /* AppDelegate.swift */,
+				B616EB5827FB64B30062FECD /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		B68C8C23280B370600485CBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B616EB5C27FB64B30062FECD /* Main.storyboard */,
+				B616EB6127FB64B40062FECD /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B68C8C2A280C4AB400485CBF /* EndlessGame */ = {
+			isa = PBXGroup;
+			children = (
+				B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */,
+				B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */,
+				B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */,
+				B67070BE280DD3EE0029E41D /* EndlessStatisticsTableViewCell.swift */,
+			);
+			path = EndlessGame;
+			sourceTree = "<group>";
+		};
+		B68C8C2B280C4ACA00485CBF /* RatingGame */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */,
+				B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */,
+				B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */,
+			);
+			path = RatingGame;
+			sourceTree = "<group>";
+		};
+		B6D0410228102BF100B5FA87 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0410028102BEC00B5FA87 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B6D04105281031BA00B5FA87 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B6D04103281031AC00B5FA87 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,13 +265,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6DA9DC827FCC9BD007FE653 /* StatisticsTableViewController.swift in Sources */,
+				B68C8C29280C492B00485CBF /* EndlessStatisticsTableViewController.swift in Sources */,
 				B6DA9DBE27FB7DBB007FE653 /* GameViewController.swift in Sources */,
-				B6DA9DC227FC2B40007FE653 /* Game.swift in Sources */,
+				B6D040FB280EAEB900B5FA87 /* CampaignGameViewController.swift in Sources */,
+				B67070C6280EA8050029E41D /* Level.swift in Sources */,
+				B67070C1280EA7AE0029E41D /* LevelTableViewCell.swift in Sources */,
+				B6D040FF280F329A00B5FA87 /* CampaignStatisticsTableViewCell.swift in Sources */,
+				B6DA9DC227FC2B40007FE653 /* EndlessGame.swift in Sources */,
+				B6D0410128102BEC00B5FA87 /* TabBarViewController.swift in Sources */,
 				B616EB5727FB64B30062FECD /* AppDelegate.swift in Sources */,
+				B6D040FD280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift in Sources */,
+				B67070C8280EA81F0029E41D /* CampaignGame.swift in Sources */,
 				B6DA9DC027FC2B39007FE653 /* Task.swift in Sources */,
+				B67070BF280DD3EE0029E41D /* EndlessStatisticsTableViewCell.swift in Sources */,
+				B68C8C27280C0D9000485CBF /* StartEndlessGameTableViewController.swift in Sources */,
 				B6DA9DC427FC2B60007FE653 /* Player.swift in Sources */,
 				B616EB5927FB64B30062FECD /* SceneDelegate.swift in Sources */,
+				B67070C3280EA7BD0029E41D /* CampaignLevelsTableViewController.swift in Sources */,
+				B6D04104281031AC00B5FA87 /* ProfileViewController.swift in Sources */,
 				B6DA9DBC27FB74D9007FE653 /* RatingGameViewController.swift in Sources */,
+				B68C8C25280C0BC800485CBF /* EndlessGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

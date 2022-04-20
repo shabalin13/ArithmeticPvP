@@ -1,35 +1,23 @@
 //
-//  StatisticsTableViewController.swift
+//  EndlessGameStatisticsTableViewController.swift
 //  ArithmeticPvP
 //
-//  Created by DIMbI4 on 05.04.2022.
+//  Created by DIMbI4 on 17.04.2022.
 //
 
 import UIKit
 
-class StatisticsTableViewController: UITableViewController {
+class EndlessStatisticsTableViewController: UITableViewController {
     
-    var playedGame: Game
-    
-    @IBOutlet var numberOfSolvedTasksLabel: UILabel!
-    @IBOutlet var numberOfPlayedGamesLabel: UILabel!
-    @IBOutlet var averageSpeedLabel: UILabel!
+    var playedGame: EndlessGame!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.hidesBackButton = true
-        
-        showResults()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.title = "Statistics: \(playedGame.numberOfCorrectAnswers)/\(playedGame.tasks.count)"
     }
     
-    init?(coder: NSCoder, playedGame: Game) {
+    init?(coder: NSCoder, playedGame: EndlessGame) {
         self.playedGame = playedGame
         super.init(coder: coder)
     }
@@ -37,39 +25,27 @@ class StatisticsTableViewController: UITableViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    func showResults() {
-        numberOfSolvedTasksLabel.text = "\(playedGame.player.totalNumberOfTasksSolved)"
-        numberOfPlayedGamesLabel.text = "\(playedGame.player.numberOfPlayedGames)"
-        averageSpeedLabel.text = playedGame.player.avgSpeed!
-    }
-    
+
     // MARK: - Table view data source
 
-    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-    */
 
-    /*
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return playedGame.tasks.count
     }
-    */
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EndlessStatisticsCell", for: indexPath) as! EndlessStatisticsTableViewCell
+        
+        let task = playedGame.tasks[indexPath.row]
+        cell.configure(task: task)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

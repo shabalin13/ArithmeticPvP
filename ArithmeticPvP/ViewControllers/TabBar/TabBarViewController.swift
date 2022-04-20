@@ -1,22 +1,20 @@
 //
-//  RatingGameViewController.swift
+//  TabBarViewController.swift
 //  ArithmeticPvP
 //
-//  Created by DIMbI4 on 04.04.2022.
+//  Created by DIMbI4 on 20.04.2022.
 //
 
 import UIKit
 
-class RatingGameViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.selectedIndex = 3
     }
     
-    @IBAction func unwindToRatingGame(segue: UIStoryboardSegue) {
-    }
+
     /*
     // MARK: - Navigation
 
