@@ -96,7 +96,6 @@
 				B68C8C23280B370600485CBF /* Views */,
 				B68C8C20280B34EA00485CBF /* Models */,
 				B68C8C21280B369D00485CBF /* ViewControllers */,
-				B6D04105281031BA00B5FA87 /* Profile */,
 				B616EB5F27FB64B40062FECD /* Assets.xcassets */,
 				B616EB6427FB64B40062FECD /* Info.plist */,
 			);
@@ -130,6 +129,7 @@
 		B68C8C21280B369D00485CBF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6D04105281031BA00B5FA87 /* Profile */,
 				B68C8C2A280C4AB400485CBF /* EndlessGame */,
 				B67070C4280EA7C70029E41D /* Campaign */,
 				B68C8C2B280C4ACA00485CBF /* RatingGame */,
