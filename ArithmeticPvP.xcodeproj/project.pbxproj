@@ -20,6 +20,7 @@
 		B68C8C25280C0BC800485CBF /* EndlessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */; };
 		B68C8C27280C0D9000485CBF /* StartEndlessGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */; };
 		B68C8C29280C492B00485CBF /* EndlessStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */; };
+		B6BBA52B281696A000A8212F /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6BBA52A281696A000A8212F /* GameController.framework */; };
 		B6D040FB280EAEB900B5FA87 /* CampaignGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */; };
 		B6D040FD280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */; };
 		B6D040FF280F329A00B5FA87 /* CampaignStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */; };
@@ -49,6 +50,7 @@
 		B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGameViewController.swift; sourceTree = "<group>"; };
 		B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndlessGameTableViewController.swift; sourceTree = "<group>"; };
 		B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessStatisticsTableViewController.swift; sourceTree = "<group>"; };
+		B6BBA52A281696A000A8212F /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignGameViewController.swift; sourceTree = "<group>"; };
 		B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatisticsTableViewController.swift; sourceTree = "<group>"; };
 		B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatisticsTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BBA52B281696A000A8212F /* GameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 			children = (
 				B616EB5527FB64B30062FECD /* ArithmeticPvP */,
 				B616EB5427FB64B30062FECD /* Products */,
+				B6BBA529281696A000A8212F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +179,14 @@
 				B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */,
 			);
 			path = RatingGame;
+			sourceTree = "<group>";
+		};
+		B6BBA529281696A000A8212F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6BBA52A281696A000A8212F /* GameController.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B6D0410228102BF100B5FA87 /* TabBar */ = {
@@ -429,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P433G7GD7J;
@@ -448,6 +461,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shabalin13.ArithmeticPvP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P433G7GD7J;
@@ -478,6 +493,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shabalin13.ArithmeticPvP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

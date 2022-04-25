@@ -83,6 +83,7 @@ class CampaignGameViewController: UIViewController {
     func newRound() {
         let isAnyTask = game.getNewTask()
         if isAnyTask {
+            print(game.currentTask.answer)
             if game.currentTask.type == .test {
                 testStackView.isHidden = false
                 keyboardStackView.isHidden = true

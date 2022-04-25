@@ -23,6 +23,7 @@ class CampaignStatisticsTableViewController: UITableViewController {
         setInitialCurrentAnswers()
         playedGame.player.levels[playedGame.level.blockID][playedGame.level.levelID] = playedGame.level
         updateMaxCompleted()
+        updateTotalStars ()
         Player.savePlayer(playedGame.player)
         
         super.viewWillDisappear(animated)
@@ -46,10 +47,18 @@ class CampaignStatisticsTableViewController: UITableViewController {
 
     func updateAllAttributes() {
         
-        
-        
         updateStarsAndCompletness()
         
+    }
+    
+    func updateTotalStars() {
+        var total = 0
+        for block in playedGame.player.levels {
+            for level in block {
+                total += level.numberOfStars
+            }
+        }
+        playedGame.player.totalNumberOfStars = total
     }
     
     func updateMaxCompleted() {

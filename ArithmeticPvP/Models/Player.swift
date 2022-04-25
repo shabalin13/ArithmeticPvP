@@ -14,6 +14,73 @@ struct Player: Equatable, Codable {
     var levels: [[Level]]
     var maxCompletedBlockID: Int
     var maxCompletedLevelID: Int
+    var totalNumberOfStars: Int
+    var endlessGameStatistics: Stat
+    
+    struct Stat: Codable {
+        var correctSolvedAdditionTasks: Int
+        var totalSolvedAdditionTasks: Int
+        
+        var correctSolvedSubtractionTasks: Int
+        var totalSolvedSubtractionTasks: Int
+        
+        var correctSolvedMultiplicationTasks: Int
+        var totalSolvedMultiplicationTasks: Int
+        
+        var correctSolvedDivisionTasks: Int
+        var totalSolvedDivisionTasks: Int
+        
+        init() {
+            self.correctSolvedAdditionTasks = 0
+            self.totalSolvedAdditionTasks = 0
+            
+            self.correctSolvedSubtractionTasks = 0
+            self.totalSolvedSubtractionTasks = 0
+            
+            self.correctSolvedMultiplicationTasks = 0
+            self.totalSolvedMultiplicationTasks = 0
+            
+            self.correctSolvedDivisionTasks = 0
+            self.totalSolvedDivisionTasks = 0
+        }
+        
+        mutating func incrementCorrectAdd() {
+            correctSolvedAdditionTasks += 1
+            totalSolvedAdditionTasks += 1
+        }
+        
+        mutating func incrementAddTotal() {
+            totalSolvedAdditionTasks += 1
+        }
+        
+        mutating func incrementCorrectSub() {
+            correctSolvedSubtractionTasks += 1
+            totalSolvedSubtractionTasks += 1
+        }
+        
+        mutating func incrementSubTotal() {
+            totalSolvedSubtractionTasks += 1
+        }
+        
+        mutating func incrementCorrectMult() {
+            correctSolvedMultiplicationTasks += 1
+            totalSolvedMultiplicationTasks += 1
+        }
+        
+        mutating func incrementMultTotal() {
+            totalSolvedMultiplicationTasks += 1
+        }
+        
+        mutating func incrementCorrectDiv() {
+            correctSolvedDivisionTasks += 1
+            totalSolvedDivisionTasks += 1
+        }
+        
+        mutating func incrementDivTotal() {
+            totalSolvedDivisionTasks += 1
+        }
+        
+    }
     
     var lastLevelIDs: (blockID: Int, levelID: Int) {
         get {
@@ -31,6 +98,8 @@ struct Player: Equatable, Codable {
         self.levels = LevelsManager.create40Levels()
         self.maxCompletedBlockID = 0
         self.maxCompletedLevelID = -1
+        self.totalNumberOfStars = 0
+        self.endlessGameStatistics = Stat()
     }
     
     static func ==(lhs: Player, rhs: Player) -> Bool {

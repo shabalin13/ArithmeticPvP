@@ -74,7 +74,9 @@ class StartEndlessGameTableViewController: UITableViewController {
                 }
                 
                 if !operations.isEmpty {
-                    endlessGameVC.game = EndlessGame(typeOfDifficulty: gameDifficulty, typeOfAnswers: answersType, typeOfTime: timeType, operations: operations)
+                    if let savedPlayer = Player.loadPlayer() {
+                        endlessGameVC.game = EndlessGame(typeOfDifficulty: gameDifficulty, typeOfAnswers: answersType, typeOfTime: timeType, operations: operations, player: savedPlayer)
+                    }
                 }
             }
         }

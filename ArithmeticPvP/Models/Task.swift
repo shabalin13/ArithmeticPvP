@@ -52,13 +52,15 @@ struct Task: Equatable, Codable {
     let answer: String
     let falseAnswers: [String]
     var currentAnswer: [String]
+    var sign: GameOperationsType
     
-    init(question: String, type: GameAnswersType, answer: String, falseAnswers: [String]) {
+    init(question: String, type: GameAnswersType, answer: String, falseAnswers: [String], sign: GameOperationsType) {
         self.id = UUID()
         self.question = question
         self.type = type
         self.answer = answer
         self.falseAnswers = falseAnswers
+        self.sign = sign
         
         var tempAnswer = [String]()
         for _ in 0..<answer.count {
@@ -165,13 +167,13 @@ struct TaskManager {
         if type == .random {
             let isTest = Int.random(in: 0...1)
             if isTest == 0 {
-                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             } else {
-                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             }
         }
         
-        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers)
+        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
     }
     
     static func createNormalTask(operations: [GameOperationsType], type: GameAnswersType) -> Task {
@@ -212,13 +214,13 @@ struct TaskManager {
         if type == .random {
             let isTest = Int.random(in: 0...1)
             if isTest == 0 {
-                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             } else {
-                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             }
         }
         
-        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers)
+        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
     }
     
     static func createHardTask(operations: [GameOperationsType], type: GameAnswersType) -> Task {
@@ -259,13 +261,13 @@ struct TaskManager {
         if type == .random {
             let isTest = Int.random(in: 0...1)
             if isTest == 0 {
-                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             } else {
-                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             }
         }
         
-        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers)
+        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
     }
     
     static func createInsaneTask(operations: [GameOperationsType], type: GameAnswersType) -> Task {
@@ -306,13 +308,13 @@ struct TaskManager {
         if type == .random {
             let isTest = Int.random(in: 0...1)
             if isTest == 0 {
-                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             } else {
-                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             }
         }
         
-        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers)
+        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
     }
     
     static func createLevelTask(range1: (from: Int, to: Int), range2: (from: Int, to: Int), range3: (from: Int, to: Int), range4: (from: Int, to: Int), operations: [GameOperationsType], type: GameAnswersType) -> Task {
@@ -353,13 +355,13 @@ struct TaskManager {
         if type == .random {
             let isTest = Int.random(in: 0...1)
             if isTest == 0 {
-                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .keyboard, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             } else {
-                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers)
+                return Task(question: question, type: .test, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
             }
         }
         
-        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers)
+        return Task(question: question, type: type, answer: "\(answer)", falseAnswers: falseAnswers, sign: sign)
 
     }
     

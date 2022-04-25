@@ -10,6 +10,12 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var numberOfStarsLabel: UILabel!
+    @IBOutlet var additionStatLabel: UILabel!
+    @IBOutlet var subtractionStstLabel: UILabel!
+    @IBOutlet var multiplicationStatLabel: UILabel!
+    @IBOutlet var divisionStatLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +23,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let savedPlayer = Player.loadPlayer() {
+        if let _ = Player.loadPlayer() {
             print("Player exists")
-            usernameLabel.text = savedPlayer.username
+            updateUI()
         } else {
             
             print("Player does not exist")
@@ -34,13 +40,43 @@ class ProfileViewController: UIViewController {
                 } else {
                     let player = Player(username: textField.text!)
                     print("Player created")
-                    self.usernameLabel.text = player.username
                     Player.savePlayer(player)
+                    self.updateUI()
                 }
             }))
 
             self.present(alert, animated: true, completion: nil)
            
+        }
+    }
+    
+    func updateUI() {
+        if let savedPlayer = Player.loadPlayer() {
+            usernameLabel.text = savedPlayer.username
+            numberOfStarsLabel.text = "\(savedPlayer.totalNumberOfStars) ⭐️"
+            
+            if savedPlayer.endlessGameStatistics.totalSolvedAdditionTasks == 0 {
+                additionStatLabel.text = "0 / 0 (0%)"
+            } else {
+                additionStatLabel.text = "\(savedPlayer.endlessGameStatistics.correctSolvedAdditionTasks) / \(savedPlayer.endlessGameStatistics.totalSolvedAdditionTasks) (\(savedPlayer.endlessGameStatistics.correctSolvedAdditionTasks * 100 / savedPlayer.endlessGameStatistics.totalSolvedAdditionTasks) %)"
+            }
+            if savedPlayer.endlessGameStatistics.totalSolvedSubtractionTasks == 0 {
+                subtractionStstLabel.text = "0 / 0 (0%)"
+            } else {
+                subtractionStstLabel.text = "\(savedPlayer.endlessGameStatistics.correctSolvedSubtractionTasks) / \(savedPlayer.endlessGameStatistics.totalSolvedSubtractionTasks) (\(savedPlayer.endlessGameStatistics.correctSolvedSubtractionTasks * 100 / savedPlayer.endlessGameStatistics.totalSolvedSubtractionTasks) %)"
+            }
+            
+            if savedPlayer.endlessGameStatistics.totalSolvedMultiplicationTasks == 0 {
+                multiplicationStatLabel.text = "0 / 0 (0%)"
+            } else {
+                multiplicationStatLabel.text = "\(savedPlayer.endlessGameStatistics.correctSolvedMultiplicationTasks) / \(savedPlayer.endlessGameStatistics.totalSolvedMultiplicationTasks) (\(savedPlayer.endlessGameStatistics.correctSolvedMultiplicationTasks * 100 / savedPlayer.endlessGameStatistics.totalSolvedMultiplicationTasks) %)"
+            }
+            
+            if savedPlayer.endlessGameStatistics.totalSolvedDivisionTasks == 0 {
+                divisionStatLabel.text = "0 / 0 (0%)"
+            } else {
+                divisionStatLabel.text = "\(savedPlayer.endlessGameStatistics.correctSolvedDivisionTasks) / \(savedPlayer.endlessGameStatistics.totalSolvedDivisionTasks) (\(savedPlayer.endlessGameStatistics.correctSolvedDivisionTasks * 100 / savedPlayer.endlessGameStatistics.totalSolvedDivisionTasks) %)"
+            }
         }
     }
     

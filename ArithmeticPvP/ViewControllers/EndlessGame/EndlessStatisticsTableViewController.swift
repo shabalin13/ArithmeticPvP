@@ -15,6 +15,8 @@ class EndlessStatisticsTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         self.title = "Statistics: \(playedGame.numberOfCorrectAnswers)/\(playedGame.tasks.count)"
+        
+        updateStatistics()
     }
     
     init?(coder: NSCoder, playedGame: EndlessGame) {
@@ -24,6 +26,37 @@ class EndlessStatisticsTableViewController: UITableViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateStatistics() {
+        for task in playedGame.tasks {
+            if task.sign == .addition {
+                if task.answer == task.stringAnswer {
+                    playedGame.player.endlessGameStatistics.incrementCorrectAdd()
+                } else {
+                    playedGame.player.endlessGameStatistics.incrementAddTotal()
+                }
+            } else if task.sign == .subtraction {
+                if task.answer == task.stringAnswer {
+                    playedGame.player.endlessGameStatistics.incrementCorrectSub()
+                } else {
+                    playedGame.player.endlessGameStatistics.incrementSubTotal()
+                }
+            } else if task.sign == .multiplication {
+                if task.answer == task.stringAnswer {
+                    playedGame.player.endlessGameStatistics.incrementCorrectMult()
+                } else {
+                    playedGame.player.endlessGameStatistics.incrementMultTotal()
+                }
+            } else if task.sign == .division {
+                if task.answer == task.stringAnswer {
+                    playedGame.player.endlessGameStatistics.incrementCorrectDiv()
+                } else {
+                    playedGame.player.endlessGameStatistics.incrementDivTotal()
+                }
+            }
+        }
+        Player.savePlayer(playedGame.player)
     }
 
     // MARK: - Table view data source

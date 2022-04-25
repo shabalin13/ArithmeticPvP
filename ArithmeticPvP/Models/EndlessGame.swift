@@ -83,14 +83,8 @@ struct EndlessGame {
     }
     
     
-    init(typeOfDifficulty: GameDifficultyType, typeOfAnswers: GameAnswersType, typeOfTime: GameTimeType, operations: [GameOperationsType]) {
+    init(typeOfDifficulty: GameDifficultyType, typeOfAnswers: GameAnswersType, typeOfTime: GameTimeType, operations: [GameOperationsType], player: Player) {
         self.id = UUID()
-        
-        if let savedPlayer = Player.loadPlayer() {
-            self.player = savedPlayer
-        } else {
-            self.player = Player(username: "DIMbI4")
-        }
         
         self.tasks = [Task]()
         
@@ -100,6 +94,8 @@ struct EndlessGame {
         self.typeOfAnswers = typeOfAnswers
         self.typeOfTime = typeOfTime
         self.operations = operations
+        
+        self.player = player
         
 //        self.currentTask = nil
     }
