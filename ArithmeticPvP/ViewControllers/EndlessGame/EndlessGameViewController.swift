@@ -17,7 +17,6 @@ class EndlessGameViewController: UIViewController {
     @IBOutlet var keyboardStackView: UIStackView!
     @IBOutlet var testStackView: UIStackView!
     
-    
     @IBOutlet var answerLabel1: UIButton!
     @IBOutlet var answerLabel2: UIButton!
     @IBOutlet var answerLabel3: UIButton!
@@ -51,6 +50,16 @@ class EndlessGameViewController: UIViewController {
         }
 
         startNewGame()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppDelegate.AppUtility.lockOrientation(.all)
     }
     
     func startNewGame() {
@@ -146,7 +155,6 @@ class EndlessGameViewController: UIViewController {
             if game.currentTask.stringAnswer == game.currentTask.answer {
                 game.numberOfCorrectAnswers += 1
             }
-//            game.tasks[game.tasks.count - 1] = game.currentTask!
             self.timeProgressView.setProgress(1.0, animated: false)
             setTime()
             newRound()
@@ -168,7 +176,6 @@ class EndlessGameViewController: UIViewController {
         if game.currentTask.stringAnswer == game.currentTask.answer {
             game.numberOfCorrectAnswers += 1
         }
-//        game.tasks[game.tasks.count - 1] = game.currentTask!
         self.timeProgressView.setProgress(1.0, animated: false)
         setTime()
         newRound()

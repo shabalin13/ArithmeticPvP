@@ -18,20 +18,20 @@ class CampaignLevelsTableViewController: UITableViewController {
         if let savedPlayer = Player.loadPlayer() {
             player = savedPlayer
         }
-//        else {
-//            player = Player(username: "DIMbI4")
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
         if let savedPlayer = Player.loadPlayer() {
             player = savedPlayer
         }
-//        else {
-//            player = Player(username: "DIMbI4")
-//        }
         self.tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppDelegate.AppUtility.lockOrientation(.all)
     }
     
     func displayError(title: String, message: String) {
@@ -102,61 +102,14 @@ class CampaignLevelsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedLevel = player.levels[indexPath.section][indexPath.row]
         
-        if indexPath.section > player.maxCompletedBlockID {
-//            displayError(title: "Error", message: "Sorry you can't skip levels!")
-            displayError(title: "Sorry you can't skip levels!", message: "")
-        } else if player.maxCompletedBlockID == indexPath.section && indexPath.row > player.maxCompletedLevelID + 1 {
-//            displayError(title: "Error", message: "Sorry you can't skip levels!")
-            displayError(title: "Sorry you can't skip levels!", message: "")
-        } else {
-            displayConfirmAlert(title: "Do you want to start \(selectedLevel.name)?", message: "", blockID: indexPath.section, levelID: indexPath.row)
-        }
+//        print("Section: \(indexPath.section), Row: \(indexPath.row)")
+//        print("BlockID: \(player.maxCompletedBlockID), LevelID: \(player.maxCompletedLevelID)")
         
+        if player.maxCompletedBlockID * 5 + player.maxCompletedLevelID + 1 >= indexPath.section * 5 + indexPath.row {
+            displayConfirmAlert(title: "Do you want to start \(selectedLevel.name)?", message: "", blockID: indexPath.section, levelID: indexPath.row)
+        } else {
+            displayError(title: "Sorry you can't skip levels!", message: "")
+        }
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -7,43 +7,6 @@
 
 import Foundation
 
-//struct Game {
-//
-//    let id: UUID
-//    let startTime: Date
-//    var endTime: Date?
-//    let numberOfTasks: Int
-//    var tasks: [Task]
-//    var player: Player
-//
-//    init(endTime: Date?, player: Player) {
-//        self.id = UUID()
-//        self.startTime = Date()
-//        self.endTime = endTime
-//        self.numberOfTasks = 7
-//
-//        let taskManager = TaskManager()
-//
-//        var tempTasks = [Task]()
-//        for _ in 1...numberOfTasks {
-//            let task = taskManager.createEasyTask()
-//            tempTasks.append(task)
-//        }
-//        self.tasks = tempTasks
-//
-//        self.player = player
-//    }
-//
-//    mutating func isThereTask() -> (isOK: Bool, task: Task?) {
-//        if !tasks.isEmpty {
-//            return (true, tasks.removeFirst())
-//        } else {
-//            return (false, nil)
-//        }
-//    }
-//
-//}
-
 enum GameDifficultyType: Codable {
     case easy, normal, hard, insane
 }
@@ -66,8 +29,6 @@ struct EndlessGame {
     var tasks: [Task]
     var player: Player
     var numberOfCorrectAnswers: Int
-//    var numberOfCompletedTasks: Int
-//    var numberOfTasks: Int
     let typeOfDifficulty: GameDifficultyType
     let typeOfAnswers: GameAnswersType
     let typeOfTime: GameTimeType
@@ -82,7 +43,6 @@ struct EndlessGame {
         }
     }
     
-    
     init(typeOfDifficulty: GameDifficultyType, typeOfAnswers: GameAnswersType, typeOfTime: GameTimeType, operations: [GameOperationsType], player: Player) {
         self.id = UUID()
         
@@ -96,8 +56,6 @@ struct EndlessGame {
         self.operations = operations
         
         self.player = player
-        
-//        self.currentTask = nil
     }
     
     mutating func getNewTask() {
@@ -105,19 +63,15 @@ struct EndlessGame {
         if typeOfDifficulty == .easy {
             let newTask = TaskManager.createEasyTask(operations: operations, type: typeOfAnswers)
             tasks.append(newTask)
-//            currentTask = newTask
         } else if typeOfDifficulty == .normal {
             let newTask = TaskManager.createNormalTask(operations: operations, type: typeOfAnswers)
             tasks.append(newTask)
-//            currentTask = newTask
         } else if typeOfDifficulty == .hard {
             let newTask = TaskManager.createHardTask(operations: operations, type: typeOfAnswers)
             tasks.append(newTask)
-//            currentTask = newTask
         } else if typeOfDifficulty == .insane {
             let newTask = TaskManager.createInsaneTask(operations: operations, type: typeOfAnswers)
             tasks.append(newTask)
-//            currentTask = newTask
         }
     }
     

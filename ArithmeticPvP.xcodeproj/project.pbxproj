@@ -20,18 +20,21 @@
 		B68C8C25280C0BC800485CBF /* EndlessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */; };
 		B68C8C27280C0D9000485CBF /* StartEndlessGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */; };
 		B68C8C29280C492B00485CBF /* EndlessStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */; };
-		B6BBA52B281696A000A8212F /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6BBA52A281696A000A8212F /* GameController.framework */; };
+		B6BBA5572817F00500A8212F /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA5562817F00500A8212F /* Guest.swift */; };
+		B6BBA55E28181ACE00A8212F /* MultiplayerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA55D28181ACE00A8212F /* MultiplayerGameViewController.swift */; };
+		B6BBA5602818214200A8212F /* StartMultiplayerGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA55F2818214200A8212F /* StartMultiplayerGameTableViewController.swift */; };
+		B6BBA5622818250B00A8212F /* MultiplayerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA5612818250B00A8212F /* MultiplayerGame.swift */; };
+		B6BBA5642818662C00A8212F /* MultiplayerStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA5632818662C00A8212F /* MultiplayerStatisticsTableViewController.swift */; };
+		B6BBA56628187A6C00A8212F /* MultiplayerStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA56528187A6C00A8212F /* MultiplayerStatisticsTableViewCell.swift */; };
+		B6BBA568281890C700A8212F /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBA567281890C700A8212F /* TaskManager.swift */; };
 		B6D040FB280EAEB900B5FA87 /* CampaignGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */; };
 		B6D040FD280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */; };
 		B6D040FF280F329A00B5FA87 /* CampaignStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */; };
 		B6D0410128102BEC00B5FA87 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0410028102BEC00B5FA87 /* TabBarViewController.swift */; };
 		B6D04104281031AC00B5FA87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D04103281031AC00B5FA87 /* ProfileViewController.swift */; };
-		B6DA9DBC27FB74D9007FE653 /* RatingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */; };
-		B6DA9DBE27FB7DBB007FE653 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */; };
 		B6DA9DC027FC2B39007FE653 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DBF27FC2B39007FE653 /* Task.swift */; };
 		B6DA9DC227FC2B40007FE653 /* EndlessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */; };
 		B6DA9DC427FC2B60007FE653 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC327FC2B60007FE653 /* Player.swift */; };
-		B6DA9DC827FCC9BD007FE653 /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,18 +53,21 @@
 		B68C8C24280C0BC800485CBF /* EndlessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGameViewController.swift; sourceTree = "<group>"; };
 		B68C8C26280C0D9000485CBF /* StartEndlessGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndlessGameTableViewController.swift; sourceTree = "<group>"; };
 		B68C8C28280C492B00485CBF /* EndlessStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessStatisticsTableViewController.swift; sourceTree = "<group>"; };
-		B6BBA52A281696A000A8212F /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		B6BBA5562817F00500A8212F /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		B6BBA55D28181ACE00A8212F /* MultiplayerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerGameViewController.swift; sourceTree = "<group>"; };
+		B6BBA55F2818214200A8212F /* StartMultiplayerGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMultiplayerGameTableViewController.swift; sourceTree = "<group>"; };
+		B6BBA5612818250B00A8212F /* MultiplayerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerGame.swift; sourceTree = "<group>"; };
+		B6BBA5632818662C00A8212F /* MultiplayerStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerStatisticsTableViewController.swift; sourceTree = "<group>"; };
+		B6BBA56528187A6C00A8212F /* MultiplayerStatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerStatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		B6BBA567281890C700A8212F /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		B6D040FA280EAEB900B5FA87 /* CampaignGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignGameViewController.swift; sourceTree = "<group>"; };
 		B6D040FC280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatisticsTableViewController.swift; sourceTree = "<group>"; };
 		B6D040FE280F329900B5FA87 /* CampaignStatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		B6D0410028102BEC00B5FA87 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B6D04103281031AC00B5FA87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingGameViewController.swift; sourceTree = "<group>"; };
-		B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B6DA9DBF27FC2B39007FE653 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndlessGame.swift; sourceTree = "<group>"; };
 		B6DA9DC327FC2B60007FE653 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6BBA52B281696A000A8212F /* GameController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +86,6 @@
 			children = (
 				B616EB5527FB64B30062FECD /* ArithmeticPvP */,
 				B616EB5427FB64B30062FECD /* Products */,
-				B6BBA529281696A000A8212F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,10 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				B6DA9DBF27FC2B39007FE653 /* Task.swift */,
-				B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */,
+				B6BBA567281890C700A8212F /* TaskManager.swift */,
 				B6DA9DC327FC2B60007FE653 /* Player.swift */,
+				B6BBA5562817F00500A8212F /* Guest.swift */,
 				B67070C5280EA8050029E41D /* Level.swift */,
+				B6DA9DC127FC2B40007FE653 /* EndlessGame.swift */,
 				B67070C7280EA81F0029E41D /* CampaignGame.swift */,
+				B6BBA5612818250B00A8212F /* MultiplayerGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				B6D04105281031BA00B5FA87 /* Profile */,
+				B6BBA55C28181ABC00A8212F /* PvP */,
 				B68C8C2A280C4AB400485CBF /* EndlessGame */,
 				B67070C4280EA7C70029E41D /* Campaign */,
-				B68C8C2B280C4ACA00485CBF /* RatingGame */,
 				B6D0410228102BF100B5FA87 /* TabBar */,
 			);
 			path = ViewControllers;
@@ -171,22 +178,15 @@
 			path = EndlessGame;
 			sourceTree = "<group>";
 		};
-		B68C8C2B280C4ACA00485CBF /* RatingGame */ = {
+		B6BBA55C28181ABC00A8212F /* PvP */ = {
 			isa = PBXGroup;
 			children = (
-				B6DA9DBD27FB7DBB007FE653 /* GameViewController.swift */,
-				B6DA9DBB27FB74D9007FE653 /* RatingGameViewController.swift */,
-				B6DA9DC727FCC9BD007FE653 /* StatisticsTableViewController.swift */,
+				B6BBA55F2818214200A8212F /* StartMultiplayerGameTableViewController.swift */,
+				B6BBA55D28181ACE00A8212F /* MultiplayerGameViewController.swift */,
+				B6BBA5632818662C00A8212F /* MultiplayerStatisticsTableViewController.swift */,
+				B6BBA56528187A6C00A8212F /* MultiplayerStatisticsTableViewCell.swift */,
 			);
-			path = RatingGame;
-			sourceTree = "<group>";
-		};
-		B6BBA529281696A000A8212F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B6BBA52A281696A000A8212F /* GameController.framework */,
-			);
-			name = Frameworks;
+			path = PvP;
 			sourceTree = "<group>";
 		};
 		B6D0410228102BF100B5FA87 /* TabBar */ = {
@@ -276,26 +276,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DA9DC827FCC9BD007FE653 /* StatisticsTableViewController.swift in Sources */,
 				B68C8C29280C492B00485CBF /* EndlessStatisticsTableViewController.swift in Sources */,
-				B6DA9DBE27FB7DBB007FE653 /* GameViewController.swift in Sources */,
 				B6D040FB280EAEB900B5FA87 /* CampaignGameViewController.swift in Sources */,
 				B67070C6280EA8050029E41D /* Level.swift in Sources */,
 				B67070C1280EA7AE0029E41D /* LevelTableViewCell.swift in Sources */,
 				B6D040FF280F329A00B5FA87 /* CampaignStatisticsTableViewCell.swift in Sources */,
+				B6BBA5602818214200A8212F /* StartMultiplayerGameTableViewController.swift in Sources */,
 				B6DA9DC227FC2B40007FE653 /* EndlessGame.swift in Sources */,
+				B6BBA56628187A6C00A8212F /* MultiplayerStatisticsTableViewCell.swift in Sources */,
 				B6D0410128102BEC00B5FA87 /* TabBarViewController.swift in Sources */,
+				B6BBA5572817F00500A8212F /* Guest.swift in Sources */,
 				B616EB5727FB64B30062FECD /* AppDelegate.swift in Sources */,
 				B6D040FD280F2E2100B5FA87 /* CampaignStatisticsTableViewController.swift in Sources */,
 				B67070C8280EA81F0029E41D /* CampaignGame.swift in Sources */,
+				B6BBA5642818662C00A8212F /* MultiplayerStatisticsTableViewController.swift in Sources */,
 				B6DA9DC027FC2B39007FE653 /* Task.swift in Sources */,
+				B6BBA55E28181ACE00A8212F /* MultiplayerGameViewController.swift in Sources */,
 				B67070BF280DD3EE0029E41D /* EndlessStatisticsTableViewCell.swift in Sources */,
 				B68C8C27280C0D9000485CBF /* StartEndlessGameTableViewController.swift in Sources */,
 				B6DA9DC427FC2B60007FE653 /* Player.swift in Sources */,
 				B616EB5927FB64B30062FECD /* SceneDelegate.swift in Sources */,
+				B6BBA568281890C700A8212F /* TaskManager.swift in Sources */,
 				B67070C3280EA7BD0029E41D /* CampaignLevelsTableViewController.swift in Sources */,
+				B6BBA5622818250B00A8212F /* MultiplayerGame.swift in Sources */,
 				B6D04104281031AC00B5FA87 /* ProfileViewController.swift in Sources */,
-				B6DA9DBC27FB74D9007FE653 /* RatingGameViewController.swift in Sources */,
 				B68C8C25280C0BC800485CBF /* EndlessGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,10 +451,11 @@
 				DEVELOPMENT_TEAM = P433G7GD7J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ArithmeticPvP/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To update user's profile photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -464,7 +469,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -479,10 +484,11 @@
 				DEVELOPMENT_TEAM = P433G7GD7J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ArithmeticPvP/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To update user's profile photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -496,7 +502,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

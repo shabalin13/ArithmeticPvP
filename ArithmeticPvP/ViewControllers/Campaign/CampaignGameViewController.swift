@@ -14,9 +14,6 @@ class CampaignGameViewController: UIViewController {
     var totalTime: Double?
     var timer = Timer()
     
-//    var player: Player
-//    var level: Level!
-    
     @IBOutlet var timeProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
@@ -51,15 +48,25 @@ class CampaignGameViewController: UIViewController {
         startCampaignGame()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppDelegate.AppUtility.lockOrientation(.all)
+    }
+    
     func startCampaignGame() {
         (self.currentTime, self.totalTime) = self.game.setTime()
         timeProgressView.setProgress(1.0, animated: false)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTimeProgress), userInfo: nil, repeats: true)
         
-        // можно убрать данную проверку
-        if game.level.typeOfTime == .withTime {
-            self.timeProgressView.setProgress(1.0, animated: false)
-            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTimeProgress), userInfo: nil, repeats: true)
-        }
+//        if game.level.typeOfTime == .withTime {
+//            self.timeProgressView.setProgress(1.0, animated: false)
+//            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTimeProgress), userInfo: nil, repeats: true)
+//        }
         
         newRound()
     }
@@ -170,15 +177,5 @@ class CampaignGameViewController: UIViewController {
     @IBSegueAction func showCampaignStatistics(_ coder: NSCoder, sender: Any?) -> CampaignStatisticsTableViewController? {
         return CampaignStatisticsTableViewController(coder: coder, playedGame: game)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

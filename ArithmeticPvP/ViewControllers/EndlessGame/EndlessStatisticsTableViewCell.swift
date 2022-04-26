@@ -39,6 +39,7 @@ class EndlessStatisticsTableViewCell: UITableViewCell {
             attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemGreen, range: range2)
             
             questionAndAnswerLabel.attributedText = attributedText
+            
         } else if task.stringAnswer != task.answer {
             let questionAndLabel = "\(task.question) = \(task.stringAnswer) (\(task.answer))"
             
@@ -50,6 +51,7 @@ class EndlessStatisticsTableViewCell: UITableViewCell {
             attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.systemGreen, range: range2)
             
             questionAndAnswerLabel.attributedText = attributedText
+            
         } else {
             let questionAndLabel = "\(task.question) = \(task.stringAnswer)"
             

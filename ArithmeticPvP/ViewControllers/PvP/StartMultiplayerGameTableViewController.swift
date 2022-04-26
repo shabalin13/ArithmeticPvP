@@ -1,25 +1,23 @@
 //
-//  StartEndlessGameTableViewController.swift
+//  StartMultiplayerGameTableViewController.swift
 //  ArithmeticPvP
 //
-//  Created by DIMbI4 on 17.04.2022.
+//  Created by DIMbI4 on 26.04.2022.
 //
 
 import UIKit
 
-class StartEndlessGameTableViewController: UITableViewController {
-    
+class StartMultiplayerGameTableViewController: UITableViewController {
+
     @IBOutlet var gameDifficultySegmentedControl: UISegmentedControl!
-    @IBOutlet var answersTypeSegmentedControl: UISegmentedControl!
     
     @IBOutlet var additionSwitch: UISwitch!
     @IBOutlet var subtractionSwitch: UISwitch!
     @IBOutlet var multiplicationSwitch: UISwitch!
     @IBOutlet var divisionSwitch: UISwitch!
     
-    @IBOutlet var timeTypeSegmentedControl: UISegmentedControl!
-    
     @IBOutlet var startGameButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +33,7 @@ class StartEndlessGameTableViewController: UITableViewController {
         AppDelegate.AppUtility.lockOrientation(.all)
     }
     
-    @IBAction func unwindToStartEndlessGame(segue: UIStoryboardSegue) {
+    @IBAction func unwindToStartMultiplayerGame(segue: UIStoryboardSegue) {
     }
     
     @IBAction func SwitchToggled(_ sender: UISwitch) {
@@ -45,10 +43,10 @@ class StartEndlessGameTableViewController: UITableViewController {
             startGameButton.isEnabled = true
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "StartEndlessGame") {
-            if let endlessGameVC = segue.destination as? EndlessGameViewController {
+        if (segue.identifier == "StartMultiplayerGame") {
+            if let MultiplayerGameVC = segue.destination as? MultiplayerGameViewController {
                 
                 var gameDifficulty: GameDifficultyType!
                 if gameDifficultySegmentedControl.selectedSegmentIndex == 0 {
@@ -67,26 +65,13 @@ class StartEndlessGameTableViewController: UITableViewController {
                 if multiplicationSwitch.isOn { operations.append(.multiplication) }
                 if divisionSwitch.isOn { operations.append(.division) }
                 
-                var answersType: GameAnswersType!
-                if answersTypeSegmentedControl.selectedSegmentIndex == 0 {
-                    answersType = .test
-                } else if answersTypeSegmentedControl.selectedSegmentIndex == 1 {
-                    answersType = .random
-                } else if answersTypeSegmentedControl.selectedSegmentIndex == 2 {
-                    answersType = .keyboard
-                }
-                
-                var timeType: GameTimeType!
-                if timeTypeSegmentedControl.selectedSegmentIndex == 0 {
-                    timeType = .withTime
-                } else if timeTypeSegmentedControl.selectedSegmentIndex == 1 {
-                    timeType = .withoutTime
+                var guests = [Guest]()
+                for id in 0..<2 {
+                    guests.append(Guest(username: "Guest #\(id + 1)"))
                 }
                 
                 if !operations.isEmpty {
-                    if let savedPlayer = Player.loadPlayer() {
-                        endlessGameVC.game = EndlessGame(typeOfDifficulty: gameDifficulty, typeOfAnswers: answersType, typeOfTime: timeType, operations: operations, player: savedPlayer)
-                    }
+                    MultiplayerGameVC.game = MultiplayerGame(typeOfDifficulty: gameDifficulty, operations: operations, guest1: guests[0], guest2: guests[1])
                 }
             }
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var numberOfStarsLabel: UILabel!
@@ -15,21 +15,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet var subtractionStstLabel: UILabel!
     @IBOutlet var multiplicationStatLabel: UILabel!
     @IBOutlet var divisionStatLabel: UILabel!
-    
+    @IBOutlet var userPhoto: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userPhoto.layer.cornerRadius = 70
+        userPhoto.clipsToBounds = true
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let _ = Player.loadPlayer() {
-            print("Player exists")
+//            print("Player exists")
             updateUI()
         } else {
-            
-            print("Player does not exist")
-            
+//            print("Player does not exist")
             let alert = UIAlertController(title: "Create User", message: "", preferredStyle: .alert)
             alert.addTextField { (textField) in textField.placeholder = "Username"}
             
@@ -39,7 +41,7 @@ class ProfileViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 } else {
                     let player = Player(username: textField.text!)
-                    print("Player created")
+//                    print("Player created")
                     Player.savePlayer(player)
                     self.updateUI()
                 }
@@ -50,9 +52,24 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppDelegate.AppUtility.lockOrientation(.all)
+    }
+    
     func updateUI() {
         if let savedPlayer = Player.loadPlayer() {
             usernameLabel.text = savedPlayer.username
+            if let userImage = savedPlayer.userPhoto {
+                userPhoto.image = UIImage(data: userImage)
+            } else {
+                userPhoto.image = UIImage(systemName: "person.circle")
+            }
             numberOfStarsLabel.text = "\(savedPlayer.totalNumberOfStars) ⭐️"
             
             if savedPlayer.endlessGameStatistics.totalSolvedAdditionTasks == 0 {
@@ -80,15 +97,47 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        let alertController = UIAlertController(title: "Choose Image Source to update users's photo", message: nil, preferredStyle: .actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { action in
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            })
+            alertController.addAction(cameraAction)
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
+                imagePicker.sourceType = .photoLibrary
+                self.present(imagePicker, animated: true, completion: nil)
+            })
+            alertController.addAction(photoLibraryAction)
+        }
+    
+//        alertController.popoverPresentationController?.sourceView = sender
+    
+        present(alertController, animated: true, completion: nil)
     }
-    */
-
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.originalImage] as? UIImage else { return }
+        
+        if var savedPlayer = Player.loadPlayer() {
+            savedPlayer.userPhoto = selectedImage.jpegData(compressionQuality: 1)
+            Player.savePlayer(savedPlayer)
+        }
+        
+        updateUI()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
