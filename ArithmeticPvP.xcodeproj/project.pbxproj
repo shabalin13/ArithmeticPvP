@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D04105281031BA00B5FA87 /* Profile */,
-				B6BBA55C28181ABC00A8212F /* PvP */,
+				B6BBA55C28181ABC00A8212F /* Multiplayer */,
 				B68C8C2A280C4AB400485CBF /* EndlessGame */,
 				B67070C4280EA7C70029E41D /* Campaign */,
 				B6D0410228102BF100B5FA87 /* TabBar */,
@@ -178,7 +178,7 @@
 			path = EndlessGame;
 			sourceTree = "<group>";
 		};
-		B6BBA55C28181ABC00A8212F /* PvP */ = {
+		B6BBA55C28181ABC00A8212F /* Multiplayer */ = {
 			isa = PBXGroup;
 			children = (
 				B6BBA55F2818214200A8212F /* StartMultiplayerGameTableViewController.swift */,
@@ -186,7 +186,7 @@
 				B6BBA5632818662C00A8212F /* MultiplayerStatisticsTableViewController.swift */,
 				B6BBA56528187A6C00A8212F /* MultiplayerStatisticsTableViewCell.swift */,
 			);
-			path = PvP;
+			path = Multiplayer;
 			sourceTree = "<group>";
 		};
 		B6D0410228102BF100B5FA87 /* TabBar */ = {
