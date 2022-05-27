@@ -1326,10 +1326,10 @@
                                                                 <rect key="frame" x="10" y="5" width="384" height="28.5"/>
                                                                 <subviews>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-KZ-4iG">
-                                                                        <rect key="frame" x="0.0" y="12" width="304" height="4"/>
+                                                                        <rect key="frame" x="0.0" y="12" width="302.5" height="4"/>
                                                                     </progressView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgY-kH-hYi">
-                                                                        <rect key="frame" x="314" y="4" width="70" height="20.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgY-kH-hYi">
+                                                                        <rect key="frame" x="312.5" y="4" width="71.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1370,14 +1370,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-nI-AGu">
                                                                 <rect key="frame" x="10" y="5" width="384" height="28.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkY-Pz-Lvm">
-                                                                        <rect key="frame" x="0.0" y="4" width="67.5" height="20.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkY-Pz-Lvm">
+                                                                        <rect key="frame" x="0.0" y="4" width="69" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-kt-EMU">
-                                                                        <rect key="frame" x="77.5" y="12.5" width="306.5" height="4"/>
+                                                                        <rect key="frame" x="79" y="12.5" width="305" height="4"/>
                                                                     </progressView>
                                                                 </subviews>
                                                             </stackView>

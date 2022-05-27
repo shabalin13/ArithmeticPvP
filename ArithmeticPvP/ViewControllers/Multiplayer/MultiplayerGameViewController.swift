@@ -40,8 +40,8 @@ class MultiplayerGameViewController: UIViewController {
         guest2AnswerLabel4.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         guest2ProgressView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         
-        guest1Label.text = "Guest #1"
-        guest2Label.text = "Guest #2"
+        guest1Label.text = "Player #1"
+        guest2Label.text = "Player #2"
         guest2Label.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         
         startNewGame()
@@ -71,7 +71,7 @@ class MultiplayerGameViewController: UIViewController {
     func newGuest1Round() {
         let isAnyTask = game.getGuest1NewTask()
         if isAnyTask {
-            print(game.guest1.currentTask.answer)
+//            print(game.guest1.currentTask.answer)
             guest1QuestionLabel.text = game.guest1.currentTask.question
             updateGuest1UI()
         } else {
@@ -83,7 +83,7 @@ class MultiplayerGameViewController: UIViewController {
     func newGuest2Round() {
         let isAnyTask = game.getGuest2NewTask()
         if isAnyTask {
-            print(game.guest2.currentTask.answer)
+//            print(game.guest2.currentTask.answer)
             guest2QuestionLabel.text = game.guest2.currentTask.question
             updateGuest2UI()
         } else {

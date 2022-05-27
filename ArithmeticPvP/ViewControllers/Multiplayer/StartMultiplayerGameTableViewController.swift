@@ -67,7 +67,7 @@ class StartMultiplayerGameTableViewController: UITableViewController {
                 
                 var guests = [Guest]()
                 for id in 0..<2 {
-                    guests.append(Guest(username: "Guest #\(id + 1)"))
+                    guests.append(Guest(username: "Player #\(id + 1)"))
                 }
                 
                 if !operations.isEmpty {

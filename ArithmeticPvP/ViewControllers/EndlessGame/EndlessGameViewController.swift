@@ -125,7 +125,7 @@ class EndlessGameViewController: UIViewController {
             keyboardStackView.isHidden = false
         }
         questionLabel.text = game.currentTask.question
-        print(game.currentTask.answer)
+//        print(game.currentTask.answer)
         updateUI()
     }
     

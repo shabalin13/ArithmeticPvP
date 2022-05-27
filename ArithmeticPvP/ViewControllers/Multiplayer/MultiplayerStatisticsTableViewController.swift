@@ -85,8 +85,8 @@ class MultiplayerStatisticsTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.section, indexPath.row)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print(indexPath.section, indexPath.row)
+//    }
 
 }
